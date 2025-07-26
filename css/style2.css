@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'iran_sans_bold';
+    src: url('../Fonts/iran_sans_bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iran_sans_light';
+    src: url('../Fonts/iran_sans_light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iran_sans_medi';
+    src: url('../Fonts/iran_sans_medi.woff') format('woff');
+}
+*{
+    font-family:iran_sans_light;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+html{
+    font-size: 60%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+header .logo{
+    font-size: 2rem;
+    color: #000;
+    font-weight: 500;
+}
+header .navbar a{
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0 2rem;
+}
+header .navbar a:hover{
+    color: orangered;
+}
+header .icons a{
+    font-size: 2rem;
+    color: #000;
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color: orangered;
+}
+#menu-bar{
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border: .1rem solid #000;
+    color: #000;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*end header */  
+.featured{
+
+    display: flex;
+     gap:60px;
+     background-image: url(3.jpg);
+
+}
+.row{
+    width: 200%;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: 1rem;
+    background: #f9f9f9;
+    padding: 5rem;
+    margin: 1.5rem 0;
+}
+.row{
+    width: 600px;
+
+}
+.row:hover{
+    border: 3px solid  #e77676;
+    border-radius: 25px;
+
+}
+.small-image{
+    display: flex;
+    gap: 45px;
+    padding-right: 10px;
+    height: 60px;
+    width: 40%;
+}
+.big-image{
+    width: 80%;
+    margin-left:80px;
+    margin-top: 15px;
+    padding: 1rem;
+}
+.small-image img{
+    width: 90%;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.big-image img:hover{
+    border: 3px solid #e77676;
+    border-radius: 15px;
+    transform: scale(1.5);
+}
+.small-image img:hover{
+    border: 3px solid #e77676;;
+    border-radius: 10px;
+    transform: scale(1.8);
+}
