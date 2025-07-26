@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Home webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .home {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+
+        .slide-container {
+            display: none;
+            width: 100%;
+        }
+
+        .slide-container.active {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .slide {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+        }
+
+        .content {
+            flex: 1 1 50%;
+            padding: 1rem;
+        }
+
+        .content h3 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .content span {
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        .content p {
+            margin: 1rem 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #444;
+        }
+
+        .image {
+            flex: 1 1 40%;
+            text-align: center;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        #prev,
+        #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            color: #333;
+            font-size: 2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+
+        #prev:hover,
+        #next:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .content,
+            .image {
+                flex: 1 1 100%;
+            }
+
+            .content h3 {
+                font-size: 1.5rem;
+            }
+
+            .content p {
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.2rem;
+            }
+        }
+
+        /* .new{
+            margin-right: 800px;
+
+        } */
+        .new:hover{
+            height: 110px;
+            width: 440px;
+            padding-top:35px;
+            padding-left: 15px;
+            /* text-align: center; */
+            font-size: larger;
+            border-radius: 15px;
+            border: 5px solid rgb(106, 224, 242);
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <div id="menu-bar" class="fa fa-bars"></div>
+        <!-- <a href="#" class="logo"><img src="3.png" width="100px" height="40px"></a> -->
+        <div class="new" style="margin: auto; font-weight: 400;">
+            <nav class="navbar">
+                <a href="index.html" target="_blank">Home</a>
+                <a href="About.html" target="_blank">About</a>
+                <a href="Product.html" target="_blank">Product</a>
+                <a href="Contact.html" target="_blank">Contact</a>
+            </nav>
+        </div>
+</header>
+    <section class="home" id="home">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <span>Nike Sport Shoes</span>
+                    <h3>Nike Metcon Shoes</h3>
+                    <p style="color: rgb(8, 8, 7);">Shoes website design includes creating digital platforms designed
+                        for displaying and
+                        marketing various shoes product types. These websites aim to provide consumers with a
+                        pleasurable and instructive online experience by enabling them to browse, research, and purchase
+                        shoes products from the comfort</p>
+                    <a href="Product.html" class="btn">Please Click Here Buy the Shoes</a>
+                </div>
+                <div class="image">
+                    <img src="img/slide/1.png" class="shoe" alt="Nike Shoe 1" width="300px" height="550%">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>Nike Sport Shoes</span>
+                    <h3>Nike Metcon Shoes</h3>
+                    <p style="color: rgb(98, 154, 90);">Shoes website design includes creating digital platforms
+                        designed for displaying and
+                        marketing various shoes product types. These websites aim to provide consumers with a
+                        pleasurable and instructive online experience by enabling them to browse, research, and purchase
+                        shoes products from the comfort</p>
+                    </p>
+                    <a href="Product.html" class="btn">Please Click Here Buy the Shoes</a>
+                </div>
+                <div class="image">
+                    <img src="img/slide/2.png" class="shoe" alt="Nike Shoe 2" width="300px" height="550px">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>Nike Sport Shoes</span>
+                    <h3>Nike Metcon Shoes</h3>
+                    <p style="color: rgb(236, 49, 49);">Shoes website design includes creating digital platforms
+                        designed for displaying and
+                        marketing various shoes product types. These websites aim to provide consumers with a
+                        pleasurable and instructive online experience by enabling them to browse, research, and purchase
+                        shoes products from the comfort
+                    </p>
+                    <a href="Product.html" class="btn">Please Click Here Buy the Shoes</a>
+                </div>
+                <div class="image">
+                    <img src="img/slide/3.png" class="shoe" alt="Nike Shoe 3" width="300px" height="550px">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <span>Nike Sport Shoes</span>
+                    <h3>Nike Metcon Shoes</h3>
+                    <p style="color: rgb(99, 180, 91);">Shoes website design includes creating digital platforms
+                        designed for displaying and
+                        marketing various shoes product types. These websites aim to provide consumers with a
+                        pleasurable and instructive online experience by enabling them to browse, research, and purchase
+                        shoes products from the comfort
+                    </p>
+                    <a href="Product.html" class="btn">Please Click Here Buy the Shoes</a>
+                </div>
+                <div class="image">
+                    <img src="img/slide/4.png" class="shoe" alt="Nike Shoe 4" width="300px" height="550px">
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div id="prev" class="fa fa-angle-left" onclick="prevSlide()"></div>
+        <div id="next" class="fa fa-angle-right" onclick="nextSlide()"></div>
+    </section>
+
+    <!-- <section class="contact" id="contact">
+        <div class="content-text">
+            <h2><span>Contact us</span></h2>
+            <p></p>
+            <div class="list">
+                <li><a href="#">Contact no: 9892352438</a></li>
+                <li><a href="#">Email id: singhrajat6246@gmail.com</a></li>
+                <li><a href="#"></a></li>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="#">
+                <input type="name" placeholder="Name" required>
+                <input type="number" placeholder="Phone" required>
+                <input type="email" placeholder="Email" required>
+                <textarea name="" id="" cols="35" rows="10" placeholder="Message"></textarea>
+                <input type="submit" value="Send" class="submit" required>
+            </form>
+        </div>
+    </section> -->
+    <!--<marquee behavior="alternate"><section class="featured">
+        <div class="row">
+            <div class="image-container">
+                <div class="small-image">
+                    <img src="img/product1/1.jpg" alt="" class="featured-image-1">
+                    <img src="img/product1/2.jpg" alt="" class="featured-image-1">
+                    <img src="img/product1/4.jpg" alt="" class="featured-image-1">
+                </div>
+                <div class="big-image">
+                    <img src="img/product1/1.jpg" alt="" width="60%" height="60%" class="big-image-1">
+            </div>
+        </div>
+        </div>
+       <div class="row"> 
+            <div class="image-container">
+                <div class="small-image"> 
+                     <img src="img/product2/1.jpg" alt="" class="featured-image-2">
+                    <img src="img/product2/2.jpg" alt="" class="featured-image-2">
+                    <img src="img/product2/4.jpg" alt="" class="featured-image-2">
+                </div>
+                <div class="big-image">
+                    <img src="img/product2/1.jpg" alt="" width="60%" height="60%" class="big-image-2">
+                </div>
+            </div>
+            </div>
+         <div class="row">
+            <div class="image-container">
+                <div class="small-image">
+                    <img src="img/product3/1.jpg" alt="" class="featured-image-3">
+                    <img src="img/product3/2.jpg" alt="" class="featured-image-3">
+                    <img src="img/product3/4.jpg" alt="" class="featured-image-3">
+                </div>
+                <div class="big-image">
+                    <img src="img/product3/1.jpg" alt="" width="60%" height="60%" class="big-image-3">
+                </div>
+            </div>
+        </div>
+    </section></marquee>-->
+    &nbsp;&nbsp;
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="img/3.jpg" alt="">
+            </div>
+            <p>To provide customers with a seamless and
+                <br>enjoyable shopping experience, the design should also represent the appearance and feel of the
+                brand
+            </p>
+            <div class="socail-links">
+                      <a href="https://www.linkedin.com/in/rajat-singh-04b91a25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                    class="fa-brands fa-linkedin media"></i></a>
+           <a href="https://github.com/Rajat-Dharmendra-singh"><i class="fa-brands fa-github media"></i></a> 
+            </div>
+        </div></footer>
+        <script>
+            let slides = document.querySelectorAll('.slide-container');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            }
+
+</script>
+</body>
+</html>
